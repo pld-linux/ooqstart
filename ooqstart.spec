@@ -36,7 +36,6 @@ Calc, Draw i Impress moga byæ uruchomione bezposrednio z menu kontekstowego
 apletu. 
 
 
-%define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
 
 %prep
