@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
 Patch0:		%{name}-opt.patch
 URL:		http://ooqstart.sourceforge.net/
 BuildRequires:	gnome-core-devel
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
