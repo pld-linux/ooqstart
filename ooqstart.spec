@@ -27,7 +27,7 @@ applications: Writer, Calc, Draw, and Impress can be launched directly
 from the context menu of the applet.
 
 %description -l pl
-Aplet s³u¿±cy do szybkiego uruchamiania aplikacji pakietów OpenOffice 
+Aplet s³u¿±cy do szybkiego uruchamiania aplikacji pakietów OpenOffice
 641C+ i StarOffice 6.0+. W za³o¿eniu ma dostarczaæ podobnych funkcji
 co ikonki w "menu tray" w innych systemach operacyjnych, w których
 dzia³a pakiet OpenOffice.
@@ -35,7 +35,7 @@ dzia³a pakiet OpenOffice.
 Program podtrzymuje procesy OpenOffice dzia³aj±ce w tle nawet wtedy,
 gdy proces jest zakoñczony przez u¿ytkownika. Cztery aplikacje:
 Writer, Calc, Draw i Impress mog± byæ uruchomione bezpo¶rednio z menu
-kontekstowego apletu. 
+kontekstowego apletu.
 
 %prep
 %setup -q
