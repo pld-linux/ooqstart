@@ -8,6 +8,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tgz
 URL:		http://%{name}.sourceforge.net/
+BuildRequires:	gnome-core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gnome-core
 Provides:	%{name}
