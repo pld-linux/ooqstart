@@ -1,0 +1,23 @@
+--- ooqstart-0.8.3/Makefile.orig	Sun Mar  3 21:58:19 2002
++++ ooqstart-0.8.3/Makefile	Wed Jul  9 11:42:30 2003
+@@ -47,16 +47,16 @@
+ #####################################################################
+ # COMPILATION RULES
+ #####################################################################
+-CFLAGS=-g -DVERSION='"$(VERSION)"' -Wall -Werror -I.
++CFLAGS=-DVERSION='"$(VERSION)"' -Wall -Werror -I. $(OPTFLAGS)
+ 
+ console.o : console/console.cxx
+-	$(CXX) $(CFLAGS) -O2 -o $@ -c $<
++	$(CXX) $(CFLAGS) -o $@ -c $<
+ 
+ gnome.o : gnome/gnome.cxx
+-	$(CXX) $(CFLAGS) `gnome-config --cflags gnomeui gnorba gdk_pixbuf` -O2 -o $@ -c $<
++	$(CXX) $(CFLAGS) `gnome-config --cflags gnomeui gnorba gdk_pixbuf` -o $@ -c $<
+ 
+ %.o : %.cxx
+-	$(CXX) $(CFLAGS) -O2 -o $@ -c $<
++	$(CXX) $(CFLAGS) -o $@ -c $<
+ 
+ 
+ #####################################################################
