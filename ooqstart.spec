@@ -1,4 +1,3 @@
-
 Summary:	OpenOffice QuickStarter applet
 Summary(pl):	Aplet szybkiego startu OpenOffice
 Name:		ooqstart
@@ -6,12 +5,14 @@ Version:	0.8.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tgz
-URL:		http://%{name}.sourceforge.net/
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
+URL:		http://ooqstart.sourceforge.net/
 BuildRequires:	gnome-core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gnome-core
 Provides:	%{name}
+
+%define		_sysconfdir	/etc/X11/GNOME
 
 %description
 This applet provides a quick launcher for Open Office 641C+ or Star
@@ -31,12 +32,9 @@ co ikonki w "menu tray" w innych systemach operacyjnych, w których
 dzia³a pakiet OpenOffice.
 
 Program podtrzymuje procesy OpenOffice dzia³aj±ce w tle nawet wtedy,
-gdy proces jest zakoñczony przez u¿ytkownika. Cztery aplikacje: Writer,
-Calc, Draw i Impress moga byæ uruchomione bezposrednio z menu kontekstowego
-apletu. 
-
-
-%define		_sysconfdir	/etc/X11/GNOME
+gdy proces jest zakoñczony przez u¿ytkownika. Cztery aplikacje:
+Writer, Calc, Draw i Impress moga byæ uruchomione bezposrednio z menu
+kontekstowego apletu. 
 
 %prep
 %setup -q
@@ -57,5 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_datadir}/applets/Utility/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
+%dir %{_datadir}/gnome/help/ooqstart_applet
+%dir %{_datadir}/gnome/help/ooqstart_applet/C
 %{_datadir}/gnome/help/ooqstart_applet/C/*
