@@ -7,11 +7,10 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	f3c15a29e8bbd7780972e69f11f564a4
+Patch0:		%{name}-opt.patch
 URL:		http://ooqstart.sourceforge.net/
 BuildRequires:	gnome-core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	gnome-core
-Provides:	%{name}
 
 %define		_sysconfdir	/etc/X11/GNOME
 
@@ -34,29 +33,34 @@ dzia³a pakiet OpenOffice.
 
 Program podtrzymuje procesy OpenOffice dzia³aj±ce w tle nawet wtedy,
 gdy proces jest zakoñczony przez u¿ytkownika. Cztery aplikacje:
-Writer, Calc, Draw i Impress moga byæ uruchomione bezposrednio z menu
+Writer, Calc, Draw i Impress mog± byæ uruchomione bezpo¶rednio z menu
 kontekstowego apletu. 
 
 %prep
 %setup -q
+%patch -p1
 
 %build
-%{__make}
+%{__make} \
+	CXX="%{__cxx}" \
+	OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} ROOT=$RPM_BUILD_ROOT PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	ETC=$RPM_BUILD_ROOT%{_sysconfdir} install-gnome
+
+%{__make} install-gnome \
+	ROOT=$RPM_BUILD_ROOT \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
+	ETC=$RPM_BUILD_ROOT%{_sysconfdir}
+
+%find_lang ooqstart_applet --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f ooqstart_applet.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_datadir}/applets/Utility/*
 %{_pixmapsdir}/*
-%dir %{_datadir}/gnome/help/ooqstart_applet
-%dir %{_datadir}/gnome/help/ooqstart_applet/C
-%{_datadir}/gnome/help/ooqstart_applet/C/*
