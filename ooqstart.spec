@@ -1,5 +1,5 @@
 Summary:	OpenOffice QuickStarter applet
-Summary(pl):	Aplet szybkiego startu OpenOffice
+Summary(pl.UTF-8):   Aplet szybkiego startu OpenOffice
 Name:		ooqstart
 Version:	0.8.3
 Release:	1
@@ -26,15 +26,15 @@ even if that process is terminated by the user. The four main
 applications: Writer, Calc, Draw, and Impress can be launched directly
 from the context menu of the applet.
 
-%description -l pl
-Aplet s³u¿±cy do szybkiego uruchamiania aplikacji pakietów OpenOffice
-641C+ i StarOffice 6.0+. W za³o¿eniu ma dostarczaæ podobnych funkcji
-co ikonki w "menu tray" w innych systemach operacyjnych, w których
-dzia³a pakiet OpenOffice.
+%description -l pl.UTF-8
+Aplet sÅ‚uÅ¼Ä…cy do szybkiego uruchamiania aplikacji pakietÃ³w OpenOffice
+641C+ i StarOffice 6.0+. W zaÅ‚oÅ¼eniu ma dostarczaÄ‡ podobnych funkcji
+co ikonki w "menu tray" w innych systemach operacyjnych, w ktÃ³rych
+dziaÅ‚a pakiet OpenOffice.
 
-Program podtrzymuje procesy OpenOffice dzia³aj±ce w tle nawet wtedy,
-gdy proces jest zakoñczony przez u¿ytkownika. Cztery aplikacje:
-Writer, Calc, Draw i Impress mog± byæ uruchomione bezpo¶rednio z menu
+Program podtrzymuje procesy OpenOffice dziaÅ‚ajÄ…ce w tle nawet wtedy,
+gdy proces jest zakoÅ„czony przez uÅ¼ytkownika. Cztery aplikacje:
+Writer, Calc, Draw i Impress mogÄ… byÄ‡ uruchomione bezpoÅ›rednio z menu
 kontekstowego apletu.
 
 %prep
