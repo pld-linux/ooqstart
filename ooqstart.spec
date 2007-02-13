@@ -1,5 +1,5 @@
 Summary:	OpenOffice QuickStarter applet
-Summary(pl.UTF-8):   Aplet szybkiego startu OpenOffice
+Summary(pl.UTF-8):	Aplet szybkiego startu OpenOffice
 Name:		ooqstart
 Version:	0.8.3
 Release:	1
